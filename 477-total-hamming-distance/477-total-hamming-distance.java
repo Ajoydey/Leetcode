@@ -10,7 +10,7 @@ class Solution {
         }
         return sum;
     }
-    public int hammingDistance(int x, int y) {
+    public int hammingDistance(int x, int y){
         return(Integer.bitCount(x^y));
     }
 }
