@@ -5,8 +5,7 @@ class Solution {
         while(z>0)
         {
             int temp = z%2;
-            if(temp==1)
-                count++;
+            count+=temp;
             z/=2;
         }
         return count;
