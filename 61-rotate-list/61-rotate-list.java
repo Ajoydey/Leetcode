@@ -15,7 +15,7 @@ class Solution {
         int count = 0;   //to count number of nodes
         ListNode last = null;  //to store last node
         ListNode ptr = head;   //to move accross the linked list
-        while(ptr != null)
+        while(ptr != null)   //Can use ptr.next!=null saving space
         {
             last = ptr;
             ptr = ptr.next;
