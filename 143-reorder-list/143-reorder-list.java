@@ -9,6 +9,9 @@
  * }
  */
 class Solution {
+    
+    //Can be optimised more by splitting linkedlist into 2 lists
+    
     public void reorderList(ListNode head) {
         Stack<ListNode> check = new Stack<>();
         int count = 0;
