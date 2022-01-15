@@ -21,7 +21,7 @@ class Solution {
             ptr = ptr.next;
             count+=1;
         }
-        if(count == k) //check if number of nodes and k are same
+        if(k%count == 0) //check if k is a multiple of number of nodes
             return head;
         if(k>count)  //check if k is greater than number of nodes
             k = k%count;
