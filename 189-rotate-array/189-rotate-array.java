@@ -1,11 +1,10 @@
 class Solution {
     public void rotate(int[] nums, int k) {
-        if(k == 0 || k == nums.length)   //base condition
+        k = k%nums.length;
+        if(k == 0)   //base condition
             return;
         if(nums.length == 1)   //if single element array return array itself
             return;
-        if(k>nums.length)   //if k is greater than array size take modulo
-            k = k%nums.length;
         reverse(nums, 0, nums.length-1-k);
         reverse(nums, nums.length-k, nums.length-1);
         reverse(nums, 0, nums.length-1);
