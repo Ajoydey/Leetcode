@@ -49,7 +49,7 @@ class Solution
     {
         for(int i =0; i<n; i++)
         {
-            long x = arr[(int)arr[i]]%n;
+            long x = arr[(int)arr[i]]%n;  //modulo required to generate original number
             arr[i]= arr[i] +x*n;
         }
         for(int i=0; i<n; i++)
