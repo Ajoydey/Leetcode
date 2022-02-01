@@ -23,8 +23,8 @@ class Solution {
         }
         if(k%count == 0) //check if k is a multiple of number of nodes
             return head;
-        if(k>count)  //check if k is greater than number of nodes
-            k = k%count;
+        
+        k = k%count;
         
         
         last.next = head;
