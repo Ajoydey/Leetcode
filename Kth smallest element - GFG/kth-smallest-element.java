@@ -35,6 +35,8 @@ class GFG {
 class Solution{
     public static int kthSmallest(int[] arr, int l, int r, int k) 
     { 
+        //heap :')   me noob
+        
         Arrays.sort(arr);
         int temp = Integer.MAX_VALUE;
         for(int i=0; i<k; i++)
