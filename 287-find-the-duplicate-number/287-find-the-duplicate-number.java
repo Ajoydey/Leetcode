@@ -1,12 +1,20 @@
 class Solution {
     public int findDuplicate(int[] nums) {
-        Arrays.sort(nums);
-        int x = -1;
-        for(int i = 0; i<nums.length-1; i++)
+        //Floyd's cycle detection
+        
+        int slow = 0;
+        int fast = 0;
+        do{
+            slow = nums[slow];
+            fast = nums[nums[fast]];
+        }while(nums[slow] != nums[fast]);
+        
+        fast = 0;
+        while(nums[slow] != nums[fast])
         {
-            if(nums[i]==nums[i+1])
-                x = nums[i];
+            slow = nums[slow];
+            fast = nums[fast];
         }
-        return x;
+        return nums[slow];
     }
 }
