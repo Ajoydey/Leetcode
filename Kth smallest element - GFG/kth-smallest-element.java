@@ -38,9 +38,6 @@ class Solution{
         //heap :')   me noob
         
         Arrays.sort(arr);
-        int temp = Integer.MAX_VALUE;
-        for(int i=0; i<k; i++)
-        temp = arr[i];
-        return temp;
+        return arr[k-1];
     } 
 }
