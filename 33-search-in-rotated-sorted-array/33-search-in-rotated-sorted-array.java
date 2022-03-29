@@ -9,7 +9,8 @@ class Solution {
             if(nums[mid] == target)
                 return mid;
             //look for sorted part of the array
-            if(nums[mid]>=nums[low])
+            
+            if(nums[mid]>=nums[low])//the first half is sorted
             {
                 //check which interval to search
                 if(target>=nums[low] && target <=nums[mid])
@@ -18,7 +19,7 @@ class Solution {
                 else
                     low = mid+1;
             }
-            else
+            else   //the second half is sorted
             {
                 if(target<=nums[high] && target>=nums[mid])
                     low = low+1;
