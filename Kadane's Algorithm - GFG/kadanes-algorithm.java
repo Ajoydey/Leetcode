@@ -35,17 +35,14 @@ class Solution{
     //Function to find the sum of contiguous subarray with maximum sum.
     long maxSubarraySum(int arr[], int n){
         
-        int max_sum = Integer.MIN_VALUE;  //will store the max sum
-        int curr_sum = 0;  //local sum to calculate sum by adding each element of array
-        
+        int  max_sum = Integer.MIN_VALUE;
+        int curr_sum = 0;
         for(int i=0; i<n; i++)
         {
-            curr_sum+=arr[i];
-            if(curr_sum>max_sum)
-            max_sum = curr_sum;
-            
+            curr_sum += arr[i];
+            max_sum = Math.max(curr_sum, max_sum);
             if(curr_sum<0)
-            curr_sum = 0;
+            curr_sum =0;
         }
         return max_sum;
     }
