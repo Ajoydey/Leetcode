@@ -1,20 +1,21 @@
 class Solution {
     public int rob(int[] nums) {
-        //either 0 to n-2 or 1 to n-1
         if(nums.length == 1)
             return nums[0];
-        return Math.max(robTemp(nums, 0, nums.length-2), robTemp(nums,1,nums.length-1));
+        int n = nums.length;
+        int[] dp = new int[nums.length];
+        Arrays.fill(dp, -1);
+        int ans1 = solve(nums, 0, n-2, dp);
+        Arrays.fill(dp, -1);
+        int ans2 = solve(nums, 1, n-1, dp);
+        return Math.max(ans1,ans2);
     }
-    public int robTemp(int[] nums, int start, int end) {
-        
-        //dynamic programming
-        
-        int dp[] = new int[nums.length+1];
-        dp[0] = 0; dp[1] = 0;   //0 for -1 and 1 for 0
-        for(int i=2; i<dp.length; i++)
-        {
-            dp[i] = Math.max(nums[i+start-2]+dp[i-2] , dp[i-1]);
-        }
-        return dp[dp.length-1];
+    public int solve(int[] nums, int idx, int end, int[] dp)
+    {
+        if(idx>end)
+            return 0;
+        if(dp[idx]!=-1)
+            return dp[idx];
+        return dp[idx] = Math.max(nums[idx] + solve(nums, idx+2, end, dp), solve(nums, idx+1, end, dp));
     }
 }
