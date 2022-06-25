@@ -1,8 +1,7 @@
 class Solution {
     public int rob(int[] nums) {
         int[] dp = new int[nums.length];
-        for(int i=0; i<dp.length; i++)
-            dp[i] = -1;
+        Arrays.fill(dp, -1);
         return robSum(nums, 0, dp);
     }
     public int robSum(int nums[], int n, int dp[])
