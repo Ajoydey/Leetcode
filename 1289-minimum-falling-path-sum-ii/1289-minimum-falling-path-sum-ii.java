@@ -20,7 +20,7 @@ class Solution {
                 for(int k =0; k<n; k++)
                 {
                     if(k != j)
-                        dp[i][j] = Math.min((grid[i][j] + dp[i+1][k]), dp[i][j]);
+                        dp[i][j] = Math.min((grid[i][j] + dp[i+1][k]), dp[i][j]);  //update dp[i][j] based on choice
                 }
             }
         }
