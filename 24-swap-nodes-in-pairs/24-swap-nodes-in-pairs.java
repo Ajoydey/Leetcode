@@ -14,11 +14,13 @@ class Solution {
         if(head == null || head.next == null)
             return head;
         
+        /*
+        //Iterative
         ListNode ptr = head;
         ListNode prev = null;
         while(ptr != null)
         {
-            if (ptr.next == null)  // for odd no of nodes;
+            if (ptr.next == null)  // for odd no. of nodes;
                 break;
             
             ListNode temp = ptr.next;
@@ -38,7 +40,15 @@ class Solution {
             
             
         }
+        */
         
+        //recursion
+        
+        ListNode forward = head.next.next;
+        ListNode nxt = head.next;
+        nxt.next = head;
+        head.next = swapPairs(forward);
+        head = nxt;
         return head;
     }
 }
