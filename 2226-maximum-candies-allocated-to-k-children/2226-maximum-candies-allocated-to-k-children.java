@@ -8,7 +8,8 @@ class Solution {
         
         if(total_candies<k)
             return 0;
-        
+        else if(total_candies == k)
+            return 1;
         else
         {
             int low = 1;  //min no. of candies a child can get since we have already taken care of 1 in base candy
