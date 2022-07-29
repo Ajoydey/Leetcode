@@ -12,7 +12,7 @@ class Solution {
             return 1;
         else
         {
-            int low = 1;  //min no. of candies a child can get since we have already taken care of 1 in base candy
+            int low = 1;  
             int high = Integer.MIN_VALUE;
             for(int candy: candies)
                 high = Math.max(candy, high);
