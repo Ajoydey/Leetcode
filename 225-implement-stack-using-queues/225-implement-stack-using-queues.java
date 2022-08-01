@@ -1,5 +1,6 @@
 class MyStack {
     
+    /*
     Queue<Integer> q1, q2;
     public MyStack() {
         q1 = new LinkedList<>();
@@ -56,6 +57,34 @@ class MyStack {
     
     public boolean empty() {
         return q1.isEmpty() && q2.isEmpty();
+    }
+    */
+    
+    //chumu solution
+    
+    Queue<Integer> q1;
+    public MyStack() {
+        q1 = new LinkedList<>();
+    }
+    
+    public void push(int x) {
+        int size = q1.size();
+        q1.offer(x);
+        while(size-- !=0){
+            q1.offer(q1.peek());
+            q1.poll();
+        }
+    }
+    
+    public int pop() {
+        return q1.poll();
+    }
+    
+    public int top() {
+        return q1.peek();
+    }
+    public boolean empty(){
+        return q1.isEmpty();
     }
 }
 
