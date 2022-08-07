@@ -1,6 +1,6 @@
 class Solution {
     public int lengthOfLongestSubstring(String s) {
-        /*HashSet<Character> hs = new HashSet<>();
+        HashSet<Character> hs = new HashSet<>();
         
         int max = 0;
         int low = 0;
@@ -14,17 +14,15 @@ class Solution {
                     hs.remove(s.charAt(low));
                     low++;
                 }
-                hs.add(s.charAt(i));
-                
+                low++;
             }
-            else
-            {
-                hs.add(s.charAt(i));
-                max = Math.max(max, hs.size());
-            }
+            else{
+            hs.add(s.charAt(i));
+            max = Math.max(max, hs.size());}
             
-        }*/
-        int max =0;
+            
+        }
+        /*int max =0;
         ArrayList<Character> arr = new ArrayList<>();
         for(int i=0; i<s.length(); i++)
         {
@@ -32,7 +30,7 @@ class Solution {
                 arr.remove(0);
             arr.add(s.charAt(i));
             max = Math.max(max, arr.size());
-        }
+        }*/
         return max;
     }
 }
