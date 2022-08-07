@@ -14,7 +14,8 @@ class Solution {
                     hs.remove(s.charAt(low));
                     low++;
                 }
-                low++;
+                low++;  //the last increement is for the same element no adding in set
+            
             }
             else{
             hs.add(s.charAt(i));
