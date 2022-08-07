@@ -25,7 +25,7 @@ class Solution {
             
         }*/
         int max =0;
-        ArrayList<Character> arr = new ArrayList<>();
+        LinkedList<Character> arr = new LinkedList<>();
         for(int i=0; i<s.length(); i++)
         {
             while(arr.contains(s.charAt(i)))
