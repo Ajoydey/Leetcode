@@ -19,7 +19,7 @@ class Solution {
             }
             else{
             hs.add(s.charAt(i));
-            max = Math.max(max, hs.size());}
+            max = Math.max(max, i-low+1);}
             
             
         }
