@@ -1,28 +1,22 @@
 class Solution {
     public int removeDuplicates(int[] nums) {
-        int i=1, k=nums.length;
-        while(i<k)
+        HashSet<Integer> hs = new HashSet<>();
+        ArrayList<Integer> arr = new ArrayList<>();
+        int newsize = 0;
+        for(int i=0; i<nums.length; i++)
         {
-            if(nums[i] == nums[i-1])  //check for duplicate and update the length
-            {
-                deletion(nums, i);
-                k--;
-            }
-            
+            if(hs.contains(nums[i]))
+                continue;
             else
-                i++;
+            {
+                hs.add(nums[i]);
+                arr.add(nums[i]);
+                newsize++;
+            }
         }
-        return k;
-    }
-    public void deletion(int nums[], int p)  //function to deletion
-    {
-        int prev = nums[nums.length-1];
-        for(int i=nums.length-2; i>=p; i--)
-        {
-            int curr  = nums[i];  //stores current element
-            nums[i] = prev;
-            prev = curr;
-            
-        }
+        for(int i=0; i<newsize; i++)
+            nums[i] = arr.get(i);
+        
+        return newsize;
     }
 }
