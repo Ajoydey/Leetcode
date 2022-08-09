@@ -1,17 +1,17 @@
 class Solution {
     public int majorityElement(int[] nums) {
-        int count=0;
-        int ele = Integer.MAX_VALUE;
-        for(int i =0; i<nums.length; i++)
+        if(nums.length == 1)
+            return nums[0];
+        int ele = Integer.MAX_VALUE, count = 0 ;
+        for(int i=0; i<nums.length; i++)
         {
-            if(count==0)
-            {
+            if(count == 0){
                 ele = nums[i];
                 count++;
             }
             else
             {
-                if(ele == nums[i])
+                if(nums[i] == ele)
                     count++;
                 else
                     count--;
