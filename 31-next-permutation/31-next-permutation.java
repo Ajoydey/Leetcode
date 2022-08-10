@@ -9,7 +9,7 @@ class Solution {
             }
         }
         if(idx_to_be_changed == -1){
-            Arrays.sort(nums);
+            reverse(nums, 0, n-1);
             return;
         }
         int next_greater = findNextGreater(nums, n, idx_to_be_changed);
