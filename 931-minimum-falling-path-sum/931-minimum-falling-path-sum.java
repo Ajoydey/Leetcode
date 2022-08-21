@@ -15,9 +15,7 @@ class Solution {
                     sum1 = matrix[i][j] + dp[i+1][j-1];
                 if((j+1)<n)
                     sum3 = matrix[i][j] + dp[i+1][j+1];
-                
                 sum2 = matrix[i][j] + dp[i+1][j];
-                
                 dp[i][j] = Math.min(Math.min(sum1,sum2),sum3);
             }
         }
