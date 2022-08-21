@@ -31,7 +31,7 @@ class Solution {
                     {
                         total_so_far += dfs(employees, sub, vis);
                     }
-                
+                break;
             }
         }
         return total_so_far;
