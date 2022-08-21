@@ -26,13 +26,12 @@ class Solution {
             {
                 vis[id] = true;
                 total_so_far += em.importance;
-                if(!((em.subordinates).isEmpty()))
-                {
+                
                     for(int sub: em.subordinates)
                     {
                         total_so_far += dfs(employees, sub, vis);
                     }
-                }
+                
             }
         }
         return total_so_far;
