@@ -1,11 +1,9 @@
 class Solution {
     public int minFallingPathSum(int[][] matrix) {
-        int n = matrix[0].length;
-        int[][] dp = new int[n][n];
+        int n=matrix[0].length;
+        int[][] dp=new int[n][n];
         for(int i=0; i<n; i++)
-        {
-            dp[n-1][i] = matrix[n-1][i];  //initialization because last elements has to be the last level cost
-        }
+            dp[n-1][i]=matrix[n-1][i];  
         for(int i = n-2; i>=0; i--)
         {
             for(int j = n-1; j>=0; j--)
