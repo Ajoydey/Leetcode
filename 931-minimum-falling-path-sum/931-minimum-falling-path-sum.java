@@ -3,7 +3,7 @@ class Solution {
         int n=matrix[0].length;
         int[][] dp=new int[n][n];
         for(int i=0; i<n; i++)
-            dp[n-1][i]=matrix[n-1][i];  
+            dp[n-1][i]=matrix[n-1][i];  //initialization because last elements has to be the last level cost
         for(int i = n-2; i>=0; i--)
         {
             for(int j = n-1; j>=0; j--)
