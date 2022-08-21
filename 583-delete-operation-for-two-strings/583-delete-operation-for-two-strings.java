@@ -1,5 +1,8 @@
 class Solution {
     public int minDistance(String word1, String word2) {
+        
+        //Can be done by lcs too (word1.length()-lcs) + (word2.length()-lcs))
+        
         int[][] dp = new int[word1.length()+1][word2.length()+1];
         for(int[] i: dp)
             Arrays.fill(i, -1);
