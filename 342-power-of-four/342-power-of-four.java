@@ -5,9 +5,7 @@ class Solution {
         if(n==1)
             return true;
         
-        double temp = Math.log(n)/Math.log(4);
-        
-        if(temp == Math.floor(temp))
+        if(Math.log(n)/Math.log(4) == Math.floor(Math.log(n)/Math.log(4)))
             return true;
         else
             return false;
