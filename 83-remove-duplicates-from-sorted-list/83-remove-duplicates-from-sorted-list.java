@@ -16,7 +16,7 @@ class Solution {
         while(ptr != null)
         {
             ListNode temp = ptr.next;
-            while(temp!= null && temp.val == ptr.val)
+            while(temp!=null && temp.val == ptr.val)
                 temp = temp.next;
             ptr.next = temp;
             ptr = temp;
