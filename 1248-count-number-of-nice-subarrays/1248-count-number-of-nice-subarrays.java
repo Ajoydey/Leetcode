@@ -2,11 +2,7 @@ class Solution {
     public int numberOfSubarrays(int[] nums, int k) {
         for(int i=0; i<nums.length; i++)
         {
-            int rem = nums[i]%2;
-            if(rem==1)
-                nums[i] = 1;
-            else
-                nums[i] = 0;
+            nums[i] = (nums[i]&1) == 0 ? 0:1;
         }
         HashMap<Integer,Integer> hm = new HashMap<>();
         hm.put(0, 1);  //sum 0
