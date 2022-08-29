@@ -5,10 +5,11 @@ class Solution {
         int cnt = 0;
         for(int i = 0; i < rows; i++) {
             for(int j = 0; j < cols; j++) {
-                if(grid[i][j] == '1') {
-                    dfs(grid, i, j);
-                    cnt++;
+                if(grid[i][j] == '0') {
+                    continue;
                 }
+                dfs(grid, i, j);
+                cnt++;
             }
         }
         return cnt;
