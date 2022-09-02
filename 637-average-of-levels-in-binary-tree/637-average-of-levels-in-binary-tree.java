@@ -24,10 +24,9 @@ class Solution {
             double levelSum = 0.0;
             int level = q.size();
             int i = level;
-            TreeNode temp = null;
             while(i-->0)
             {
-                temp = q.poll();
+                TreeNode temp = q.poll();
                 levelSum += temp.val;
                 if(temp.left != null)
                     q.offer(temp.left);
