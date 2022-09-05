@@ -10,8 +10,8 @@ class Solution {
         
         if(n==1)
             return 1;
-        if(dp[n-1] != -1)
-            return dp[n-1];
+        if(dp[n] != -1)
+            return dp[n];
         int curr_len = 1;
         for(int i=1; i<n; i++)
         {
@@ -22,6 +22,6 @@ class Solution {
         }
         max_len = Math.max(max_len, curr_len);
         
-        return dp[n-1] = curr_len;
+        return dp[n] = curr_len;
     }
 }
